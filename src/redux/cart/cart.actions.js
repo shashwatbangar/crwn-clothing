@@ -5,12 +5,31 @@ const toggleCartHidden = () => ({
   type: CartActionTypes.TOGGLE_CART_HIDDEN
 });
 
-export const addItem = item => ({
+const addItem = item => ({
   type: CartActionTypes.ADD_ITEM,
   payload: item
 });
 
-export default toggleCartHidden;
+const removeItem = item => ({
+  type: CartActionTypes.REMOVE_ITEM,
+  payload: item
+});
+
+const cleaItemFromCart = item => (
+  {
+    type: CartActionTypes.CLEAR_ITEM_FROM_CART,
+    payload: item
+  }
+);
+
+export default cleaItemFromCart;
+export {
+  addItem,
+  removeItem,
+  toggleCartHidden,
+  cleaItemFromCart
+};
+
 
 
 
